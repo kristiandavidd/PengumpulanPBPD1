@@ -15,8 +15,7 @@
                 'Budi' => array(78, 60, 64),
                 'Nina' => array(67, 56, 84),
                 'Budi' => array(87, 69, 50),
-                'Budi' => array(98, 65, 74),
-                'Farrel Ardana' => array(100,100,20)
+                'Budi' => array(98, 65, 74)
             );
 
             // Fungsi untuk menghitung rata-rata
