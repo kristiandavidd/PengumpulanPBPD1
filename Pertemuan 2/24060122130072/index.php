@@ -1,3 +1,7 @@
+<!-- Nama      : Qun Alfadrian S. P. -->
+<!-- NIM       : 24060122130072 -->
+<!-- Tanggal   : 10 September 2024  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
