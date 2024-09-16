@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-image: url(gambar.png);
+        }
+        .header-form{
+            background-color: rgb(154, 247, 154);
+        }
+        .form-control{
+            width:470px;
+        }
+        .header-form{
+            padding: 10px;
+        }
+        .body-form{
+            padding: 10px;
+        }
+        button{
+            border-radius: 8px;
+            width: 80px;
+            height: 30px;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+            transition: 1s;
+        }
+
+        .btn-btn-danger{
+            background-color: #dc3545;
+            color: white;
+            border: none;
+        }
+        .btn-btn-primary{
+            background-color:#007bff;
+            color: white;
+            border: none;
+        }
+        table{
+            background-color: white;
+        }
+    </style>
+    <script>
+        function hide_ekskul(){
+            const ekskul = document.getElementById('ekskul-all');
+            if (document.getElementById('Kelas').value == 'XII'){
+                ekskul.style.display = 'none';
+            }
+            else{
+                ekskul.style.display = 'block';
+            }
+        }
+        function maks_min_ekskul() {
+        var cekbox = document.getElementsByClassName("form-check-input");
+        var counter;
+        var sum = 0;
+        for (counter = 0; counter < cekbox.length; counter++) {
+          if (cekbox[counter].checked) {
+            sum = sum + 1;
+          }
+        }
+        if (sum >=1 && sum <=3) {
+          return true;
+        } else {
+          alert("pilih satu, dua, atau tiga saja");
+          return false;
+        }
+      }
+    </script>
+
+    <title>tugasForm</title>
+</head>
+<body>
+    <table border="1" style="border-collapse: collapse; width: 500px; margin: 100px auto;">
+        <tr>
+            <td class="header-form">
+                <b>Form Input Siswa</b>
+            </td>
+        </tr>
+        <tr>
+            <td class="body-form">
+                <form action="tugasPBP3.php" method="post" onsubmit="return maks_min_ekskul()">
+                    <div class="form-group">
+                        <label for="NIS">NIS:</label><br>
+                        <input type="text" class="form-control" id="NIS" name="NIS" maxlength="10" minlength="10" pattern="[0-9]+" title="hanya angka yang diperbolehkan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nama">Nama:</label><br>
+                        <input type="text" class="form-control" id="Nama" name="Nama">
+                    </div>
+                    <label>Jenis Kelamin</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" name="jenis_kelamin" class="form-check-input" value="pria">
+                            Pria
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" name="jenis_kelamin" class="form-check-input" value="wanita">
+                            Wanita
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="Kelas">Kelas:</label><br>
+                        <select name="Kelas" id="Kelas" class="form-control" onchange="hide_ekskul()">
+                            <option value="X" id="X" selected>X</option>
+                            <option value="XI" id="XI">XI</option>
+                            <option value="XII" id="XII">XII</option>
+                        </select>
+                    </div>
+                    <div id="ekskul-all" class="ekskul-class">
+                        <div class="form-check">
+                            <label>Peminatan:</label><br>
+                            <label class="form-check-label">
+                                <input type="checkbox" name="ekstrakurikuler[]" class="form-check-input" value="pramuka">
+                                Pramuka
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="ekstrakurikuler[]" class="form-check-input" value="seniTari">
+                                Seni Tari
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="ekstrakurikuler[]" class="form-check-input" value="sinematografi">
+                                Sinematografi
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="ekstrakurikuler[]" class="form-check-input" value="basket">
+                                Basket
+                            </label>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- Submit, reset button -->
+                    <br>
+                    <button type="submit" class="btn-btn-primary" name="submit" value="submit">Submit</button>
+                    <button type="reset" class="btn-btn-danger">reset</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
