@@ -91,7 +91,7 @@
     <div class="container" style="max-width: 600px; padding: 10px 0px">
         <div class="card">
             <div class="card-header">
-                Form Siswa
+                Form Input Siswa
             </div>
             <div class="card-body">
                 <form method="POST" autocomplete="on" action="">
