@@ -1,12 +1,12 @@
 <!--Nama  : Muthia Zhafira Sahnah -->
 <!-- NIM  :  24060122130071-->
- <!-- Tanggal  Pengerjaan : 4 September 2024-->
+<!-- Tanggal  Pengerjaan : 4 September 2024-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Sorting</title>
+    <title>Array Sorting </title>
 </head>
 <body>
     <p>Nama : Muthia Zhafira Sahnah</p>
