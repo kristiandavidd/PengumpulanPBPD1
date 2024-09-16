@@ -174,6 +174,7 @@
                                 echo '<br /> - '.$ekskul_item;
                             }
                         }
+                        echo '</div>';
                     }
                 ?>
             </div>
