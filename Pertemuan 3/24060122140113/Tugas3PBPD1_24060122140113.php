@@ -3,10 +3,8 @@ Tanggal Dibuat : Minggu, 15 September 2024
 Deskripsi : Form pengisian Siswa SMA dengan input NIS, Nama, Jenis Kelamin, Kelas, dan Ekstrakurikuler dengan syarat validasi tertentu -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Siswa</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
