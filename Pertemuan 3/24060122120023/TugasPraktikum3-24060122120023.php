@@ -42,13 +42,11 @@
                 }
 
                 // Validasi Jenis Kelamin: tidak boleh kosong
-                $jenis_kelamin = test_input($_POST['jenis_kelamin']);
                 if (empty($jenis_kelamin)){
                     $error_jenis_kelamin = "Jenis kelamin harus diisi!";
                 }
 
                 // Validasi Kelas: tidak boleh kosong
-                $kelas = test_input($_POST['kelas']);
                 if (empty($kelas)){
                     $error_kelas = "Kelas harus diisi!";
                 }
