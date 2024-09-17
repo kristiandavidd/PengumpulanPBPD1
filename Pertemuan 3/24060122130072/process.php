@@ -1,3 +1,7 @@
+<!-- Nama   : Qun Alfadrian Setyowahyu Putro -->
+<!-- NIM    : 24060122130072 -->
+<!-- Tanggal: 17 September 2024 -->
+
 <?php 
     function test_input($data) {
         $data = trim($data);
