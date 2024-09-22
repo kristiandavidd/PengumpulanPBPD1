@@ -43,9 +43,7 @@ function ValidateNIS() {
 
 function ValidateNama() {
     let nama = document.getElementById("nama").value;
-    let namaEmpty = document.getElementById("namaEmpty");
-    let namaInvalid = document.getElementById("namaInvalid");
-    let regex = /^[a-zA-Z ]*$/;
+    let namaEmpty = document.getElementById("namaEmpty");   
     
     if (!nama) {
         EnableElement(namaEmpty);

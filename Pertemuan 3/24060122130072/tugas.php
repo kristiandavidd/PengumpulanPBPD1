@@ -36,7 +36,8 @@
                 </div>
                 <div class="form-group mb-3">
                     <label for="nama" class="form-label">Nama:</label>
-                    <input type="text" name="nama" id="nama" class="form-control" onkeypress="ValidateNama()" onchange="ValidateNama()"
+                    <input type="text" name="nama" id="nama" class="form-control" 
+                    onkeypress="ValidateNama()" onchange="ValidateNama()"
                     value="<?php if (isset($nama)) {echo $nama;} ?>" required>
                     <div id="namaEmpty" class="invalid-feedback">
                         Nama harus diisi.
@@ -49,14 +50,16 @@
                     <label class="mb-1" for="">Jenis Kelamin</label>
                     <div class="form-check mb-1">
                         <label class="form-check-label">
-                            <input type="radio" id="radioPria" name="jenis_kelamin" class="form-check-input" value="pria"
+                            <input type="radio" id="radioPria" name="jenis_kelamin" 
+                            class="form-check-input" value="pria"
                             <?php if (isset($jenisKelamin) && $jenisKelamin=="pria") {echo "checked";} ?>>
                             Pria
                         </label>
                     </div>
                     <div class="form-check mb-1">
                         <label class="form-check-label">
-                            <input type="radio" id="radioWanita" name="jenis_kelamin" class="form-check-input" value="wanita"
+                            <input type="radio" id="radioWanita" name="jenis_kelamin" 
+                            class="form-check-input" value="wanita"
                             <?php if (isset($jenisKelamin) && $jenisKelamin=="wanita") {echo "checked";} ?>>
                             Wanita
                         </label>
