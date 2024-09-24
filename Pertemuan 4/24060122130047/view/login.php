@@ -1,3 +1,7 @@
+<!-- 
+ Nama: Tirza Aurellia Wijaya
+ NIM: 24060122130047
+ Tanggal Pengerjaan: 24 Sept 2024 -->
 <?php
     session_start(); //inisialisasi session
     require_once('../lib/db_login.php');
