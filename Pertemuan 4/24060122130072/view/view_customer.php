@@ -1,6 +1,6 @@
 <?php require '../header.html'; ?>
 
-<div class="card">
+<div class="card col-11 mx-auto">
     <div class="card-header">Customer Data</div>
     <div class="card-body">
         <a href="add_customer.php" class="btn btn-primary">Add Customer Data</a><br><br>
@@ -31,7 +31,10 @@
                 echo '<td>'.$row->name.'</td>';
                 echo '<td>'.$row->address.'</td>';
                 echo '<td>'.$row->city.'</td>';
-                echo '<td><a href="edit_customer.php" class="btn btn-warning btn-sm" id='.$row->customerid.'>Delete</a></td>';
+                echo '<td><a class="btn btn-warning btn-sm" href="edit_customer.php?id='.
+                $row->customerid.'">Edit</a>&nbsp;&nbsp;
+                <a class="btn btn-danger btn-sm" href="confirm_delete_customer.php?id='.
+                $row->customerid.'">Delete</a></td>';
                 echo '</tr>';
                 $i++;
             }
