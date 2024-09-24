@@ -1,3 +1,10 @@
+<?php  
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+}
+?>
+
 <?php require '../header.html'; ?>
 
 <div class="card col-11 mx-auto">
@@ -44,7 +51,9 @@
             $result->free();
             $db->close();
              ?>
-        </table>
+        <!-- </table> -->
+        <br><br>
+        <a href="logout.php" class="btn btn-danger">Logout</a>
     </div>
 </div>
 
