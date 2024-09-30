@@ -1,0 +1,57 @@
+<!-- 
+Nama : Ardy Hasan Rona Akhmad
+NIM : 24060122130053
+Tanggal : 9 September 2024
+Lab : PBP D1
+Tugas Pertemuan 2 
+-->
+
+<html>
+    <head>
+        <title>Tugas Pertemuan 2</title>
+    </head>
+    <body>
+        <?php
+        $array_mhs = array(
+            'Abdul' => array(89, 90, 54),
+            'Budi' => array(98, 65, 74),
+            'Nina' => array(67, 56, 84)
+        );
+
+        function hitung_rata($array) {
+            $jumlah = 0;
+            $banyak = 0;
+            
+            foreach ($array as $nilai) {
+                $jumlah += $nilai;
+                $banyak++;
+            }
+            
+            return $jumlah / $banyak;
+        }
+
+        function print_mhs($array_mhs) {
+            echo "<table border='1'>";
+            echo "<tr><td>Nama</td><td>Nilai 1</td><td>Nilai 2</td><td>Nilai 3</td><td>Rata2</td></tr>";
+            
+            foreach ($array_mhs as $nama => $nilai) {
+                echo "<tr>";
+                echo "<td>" . $nama . "</td>";
+                
+                foreach ($nilai as $n) {
+                    echo "<td>" . $n . "</td>";
+                }
+
+                $rata2 = hitung_rata($nilai);
+                echo "<td>" . $rata2 . "</td>";
+                
+                echo "</tr>";
+            }
+            
+            echo "</table>";
+        }
+
+        print_mhs($array_mhs);     
+        ?>
+    </body>
+</html>
