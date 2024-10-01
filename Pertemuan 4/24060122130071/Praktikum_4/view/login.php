@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
         $escape_email = $conn->real_escape_string($email);
         
         // query buat cek email and password
-        $query = "SELECT * FROM admin WHERE email='".$escape_email."' AND password='".md5($password)."'";
+        $query = "SELECT * FROM admin WHERE email='".$escape_email."' AND password='".($password)."'";
         $result = $conn->query($query);
         if (!$result) {
             die ("Tidak dapat menghubungi database: <br />". $conn->error);
