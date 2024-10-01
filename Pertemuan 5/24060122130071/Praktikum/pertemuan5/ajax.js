@@ -1,8 +1,7 @@
-// Nama       : Kristian David Adi Prasetya
-// NIM        : 24060121130049
-// Lab        : B2
-// Tanggal    : 6 Oktober 2023
-// Deskripsi  : membuat program berbasis PHP dengan bantuan AJAX
+
+//<!--Nama  : Muthia Zhafira Sahnah -->
+//<!-- NIM  :  24060122130071-->
+//<!-- Tanggal  Pengerjaan : 30 September 2024-->
 
 function getXMLHTTPRequest() {
     if (window.XMLHttpRequest) {
