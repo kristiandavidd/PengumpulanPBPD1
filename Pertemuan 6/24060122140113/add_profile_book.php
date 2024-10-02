@@ -87,8 +87,24 @@ if(isset($_GET["submit"])){
         // validasi hobby
         if(empty($hobby)){
             $error_hobby = "Pehobbyan harus dipilih";
-            $is_valid = FALSE;
+                        $is_valid = FALSE;
 
+            }
+
+            if ($is_valid) {
+                // Escape inputs data
+                $address = $db->real_escape_string($address);
+            
+                $query = "INSERT INTO profile_books (`id`, `name`, `nickname`, `phone_number`, 'blood_type_id', 'hobby_id', 'best_three_1', 'best_three_2', 'best_three_3') VALUES (NULL, '" . $name . "', '" . $nickname . "', '" . $phone_number . "' , '" . $blood_type_id . "', '" . $hobby_id . "' , '" . $best_three_1 . "' , '" . $best_three_2 . "', '" . $best_three_3 . "')";
+            
+                // Execute the query
+                $result = $db->query($query);
+                if (!$result) {
+                    die("Could not query the database: <br />" . $db->error . "<br>Query: " . $query);
+                } else {
+                    $db->close();
+                    header('Location: view_customer.php');
+                }
             }
 
     }
@@ -126,19 +142,5 @@ if(isset($_GET["submit"])){
 
 // TODO 5: INSERT DATA
 
-if ($is_valid) {
-    // Escape inputs data
-    $address = $db->real_escape_string($address);
 
-    $query = "INSERT INTO profile_books (`id`, `name`, `nickname`, `phone_number`, 'blood_type_id', 'hobby_id', 'best_three_1', 'best_three_2', 'best_three_3') VALUES (NULL, '" . $name . "', '" . $nickname . "', '" . $phone_number . "' , '" . $blood_type_id . "', '" . $hobby_id . "' , '" . $best_three_1 . "' , '" . $best_three_2 . "', '" . $best_three_3 . "')";
-
-    // Execute the query
-    $result = $db->query($query);
-    if (!$result) {
-        die("Could not query the database: <br />" . $db->error . "<br>Query: " . $query);
-    } else {
-        $db->close();
-        header('Location: view_customer.php');
-    }
-}
 ?>
