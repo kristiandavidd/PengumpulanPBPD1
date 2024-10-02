@@ -77,15 +77,13 @@ $result = $db->query($query);
 if (!$result) {
     die("Could not query to the database: <br>".$db->error);
 } else {
-    $valid_blood = array();
-    $result->fetch_all();
+    $result = $result->fetch_all(MYSQLI_ASSOC);
     $valid_blood = array_column($result, 'name', 'id');
     if (!in_array($blood_type_id, $valid_blood)) {
         $error = "Blood type invalid";
         $valid = FALSE;
     }
 }
-$result->free();
 
 
 // Hobby Validation
@@ -96,15 +94,13 @@ $result = $db->query($query);
 if (!$result) {
     die("Could not query to the database: <br>".$db->error);
 } else {
-    $valid_hobby = array();
-    $result->fetch_all();
+    $result = $result->fetch_all(MYSQLI_ASSOC);
     $valid_hobby = array_column($result, 'name', 'id');
     if (!in_array($hobby_id, $valid_hobby)) {
         $error = "Hobby is not in database";
         $valid = FALSE;
     }
 }
-$result->free();
 
 
 // Best Three
@@ -116,11 +112,13 @@ if ($best_three_1 == "") {
 
 
 // TODO 5: INSERT DATA
-$query = "INSERT INTO profile_books (name, nickname, address, phone_number, blood_type_id, hobby_id, best_three_1, best_three_2, best_three_3)
-            VALUES (".$name.",".$nickname.","."$address".",".$phone_number.",".$blood_type_id.",".$hobby_id.","
-            .$best_three_1.",".$best_three_2.",".$best_three_3.")";
+$query = "INSERT INTO profile_books (name, nickname, address, phone_number, blood_type_id, hobby_id, best_three_1, best_three_2, best_three_3) "
+            ."VALUES ('".$name."','".$nickname."','"."$address"."','".$phone_number."','".$blood_type_id."','".$hobby_id."','"
+            .$best_three_1."','".$best_three_2."','".$best_three_3."')";
+                
 
 $result = $db->query($query);
 if (!$result) {
     die("Could not query to the database: <br>".$db->error);
 }
+$db->close();
